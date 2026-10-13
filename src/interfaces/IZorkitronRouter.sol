@@ -1,0 +1,30 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.26;
+
+import {ZorkitronHook} from "../ZorkitronHook.sol";
+
+interface IZorkitronRouter {
+    function depositLiquidity(
+        uint256 tokenId
+        // address _currency0,
+        // address _currency1
+        // int24 tickLower,
+        // int24 tickUpper,
+        // uint256 liquidity,
+        // uint128 amount0Max,
+        // uint128 amount1Max,
+        // uint256 ethToSend
+    ) external returns (bool success);
+    // function depositCollateral(address owner) external returns (bool success);
+    function removeLiquidity(address owner) external returns (bool success);
+    // function setHookContract(address _hookContractAddr) external;
+    // function initializePool(
+    //     address _currency0,
+    //     address _currency1,
+    //     int24 _tickSpacing,
+    //     uint24 _liquidityProviderFee,
+    //     uint128 amount0Max,
+    //     uint128 amount1Max,
+    //     uint256 ethToSend
+    // ) external returns(bool success);
+}
